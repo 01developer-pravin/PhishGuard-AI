@@ -1,0 +1,34 @@
+# PhishGuard AI — Dependency Manifest
+#
+# This project is built with HTML5, CSS3, and vanilla JavaScript.
+# It has NO runtime dependencies, NO npm packages, NO Python packages,
+# and NO external libraries of any kind.
+#
+# Everything runs natively in a modern web browser.
+# No installation step is required.
+#
+# ── RUNTIME REQUIREMENTS ────────────────────────────────────────
+#
+# Browser (any one of the following):
+#   Google Chrome        88+
+#   Mozilla Firefox      85+
+#   Microsoft Edge       88+
+#   Apple Safari         14+
+#   Opera                74+
+#
+# The following browser APIs are used (all built-in, no polyfill needed):
+#   - URL (WHATWG URL API)          — for parsing URL structure
+#   - document.querySelector / getElementById
+#   - Element.classList
+#   - EventTarget.addEventListener
+#   - String.prototype (regex methods)
+#
+# ── OPTIONAL DEVELOPMENT TOOLS ──────────────────────────────────
+#
+# To run a local development server (optional, not required):
+#   Python 3.x            — for `python -m http.server`
+#   VS Code + Live Server — browser extension by Ritwick Dey
+#
+# ── NO PYTHON PACKAGES ARE USED ─────────────────────────────────
+# (This file is included as a standard academic submission artefact.
+#  A requirements.txt for a pure frontend project contains no pip packages.)

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhishGuard AI — Cybersecurity Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🛡️</span>
+      <span class="brand-name">PhishGuard <span class="accent">AI</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#analyzer" class="nav-link">Analyzer</a></li>
+      <li><a href="#url-checker" class="nav-link">URL Checker</a></li>
+      <li><a href="#quiz" class="nav-link">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">AI-POWERED · 100% FREE · RUNS LOCALLY</div>
+      <h1>Detect Phishing Attacks<br><span class="accent">Before They Hook You</span></h1>
+      <p class="hero-sub">Analyze suspicious messages and URLs instantly using advanced pattern recognition — no data ever leaves your browser.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Detection Rules</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Private</span></div>
+        <div class="stat"><span class="stat-num">0ms</span><span class="stat-label">Server Latency</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="shield-ring r1"></div>
+      <div class="shield-ring r2"></div>
+      <div class="shield-ring r3"></div>
+      <div class="shield-core">🛡️</div>
+    </div>
+  </header>
+
+  <!-- ── MESSAGE ANALYZER ───────────────────────────────────── -->
+  <section class="section" id="analyzer">
+    <div class="section-header">
+      <h2>📧 Phishing Message Analyzer</h2>
+      <p>Paste any suspicious email, SMS, or chat message below.</p>
+    </div>
+
+    <div class="card analyzer-card">
+      <div class="sample-bar">
+        <span class="sample-label">Load a sample:</span>
+        <button class="sample-btn" data-sample="bank">🏦 Bank Alert</button>
+        <button class="sample-btn" data-sample="prize">🎁 Prize Winner</button>
+        <button class="sample-btn" data-sample="it">💻 IT Support</button>
+        <button class="sample-btn" data-sample="delivery">📦 Delivery</button>
+      </div>
+
+      <textarea id="msg-input" class="text-input" rows="7"
+        placeholder="Paste a suspicious message here and click Analyze…"></textarea>
+
+      <div class="action-row">
+        <button id="msg-analyze-btn" class="btn-primary">Analyze Message</button>
+        <button id="msg-clear-btn" class="btn-ghost">Clear</button>
+      </div>
+
+      <div id="msg-result" class="result-panel hidden"></div>
+    </div>
+  </section>
+
+  <!-- ── URL CHECKER ────────────────────────────────────────── -->
+  <section class="section" id="url-checker">
+    <div class="section-header">
+      <h2>🔗 Suspicious URL Checker</h2>
+      <p>Enter a URL to inspect its structure for phishing indicators. <strong>The URL is never opened or visited.</strong></p>
+    </div>
+
+    <div class="card analyzer-card">
+      <input id="url-input" class="url-input"
+        type="text"
+        placeholder="https://example-suspicious-link.com/login?verify=true" />
+
+      <div class="action-row">
+        <button id="url-analyze-btn" class="btn-primary">Check URL</button>
+        <button id="url-clear-btn" class="btn-ghost">Clear</button>
+      </div>
+
+      <div id="url-result" class="result-panel hidden"></div>
+    </div>
+  </section>
+
+  <!-- ── QUIZ ───────────────────────────────────────────────── -->
+  <section class="section" id="quiz">
+    <div class="section-header">
+      <h2>🧠 Cybersecurity Awareness Quiz</h2>
+      <p>Test your knowledge — 8 questions, instant feedback on every answer.</p>
+    </div>
+
+    <div class="card quiz-card">
+      <div id="quiz-intro">
+        <p class="quiz-intro-text">How well can you spot a phishing attempt? Take this quick quiz to find out!</p>
+        <button id="quiz-start-btn" class="btn-primary">Start Quiz</button>
+      </div>
+
+      <div id="quiz-area" class="hidden">
+        <div class="quiz-progress-bar">
+          <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+        </div>
+        <div class="quiz-meta">
+          <span id="quiz-q-num">Question 1 of 8</span>
+          <span id="quiz-score-live">Score: 0</span>
+        </div>
+        <div id="quiz-question" class="quiz-question"></div>
+        <div id="quiz-options" class="quiz-options"></div>
+        <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+        <button id="quiz-next-btn" class="btn-primary hidden">Next Question →</button>
+      </div>
+
+      <div id="quiz-result" class="hidden quiz-final"></div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>🛡️ <strong>PhishGuard AI</strong> — All analysis runs locally in your browser. No data is collected or transmitted.</p>
+    <p class="footer-sub">Built with HTML, CSS &amp; Vanilla JS · Zero cost · Zero tracking</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
